@@ -13,10 +13,6 @@
     "48": "icons/icon-48.png"
   },
 
-  "externally_connectable": {
-    "matches": ["https://reflect.app/*", "https://*.reflect.app/*"]
-  },
-
   "options_ui": {
     "page": "options.html",
     "open_in_tab": true
@@ -47,13 +43,6 @@
     "storage",
     "alarms",
     "webNavigation",
-    "activeTab",
     "scripting"
-  ],
-
-  "host_permissions": [
-    "https://read.amazon.com/*",
-    "https://reflect.app/*",
-    "https://*.reflect.app/*"
   ]
 }
