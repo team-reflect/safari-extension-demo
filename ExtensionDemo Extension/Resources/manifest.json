@@ -1,0 +1,59 @@
+{
+  "manifest_version": 3,
+
+  "name": "ExtensionDemo",
+
+  "description": "Demo extension",
+
+  "version": "1.5.2",
+
+  "icons": {
+    "128": "icons/icon-128.png",
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png"
+  },
+
+  "externally_connectable": {
+    "matches": ["https://reflect.app/*", "https://*.reflect.app/*"]
+  },
+
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+
+  "action": {
+    "default_icon": {
+        "16": "icons/toolbar-icon-16.png",
+        "19": "icons/toolbar-icon-19.png",
+        "32": "icons/toolbar-icon-32.png",
+        "38": "icons/toolbar-icon-38.png"
+      }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content-script.js"],
+      "run_at": "document_end"
+    }
+  ],
+
+  "permissions": [
+    "storage",
+    "alarms",
+    "webNavigation",
+    "activeTab",
+    "scripting"
+  ],
+
+  "host_permissions": [
+    "https://read.amazon.com/*",
+    "https://reflect.app/*",
+    "https://*.reflect.app/*"
+  ]
+}
